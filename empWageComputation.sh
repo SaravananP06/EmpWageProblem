@@ -21,3 +21,19 @@ echo "Employee daily Wage is " $DailyWage
 #UC3
 Parttime_EmpHr=4
 
+#UC4
+randomCheck1=$(( $RANDOM%3 ))
+case $randomCheck1 in
+	1)
+		EmpHour=8
+		;;
+	2)
+		EmpHour=4
+		;;
+	0)
+		EmpHour=0
+		;;
+	*)
+esac
+dailyEmpWage=$(($EmpRatePerHour*$EmpHour))
+echo "Employee Wage using switch case " $dailyEmpWage
