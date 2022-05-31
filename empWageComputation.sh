@@ -37,3 +37,14 @@ case $randomCheck1 in
 esac
 dailyEmpWage=$(($EmpRatePerHour*$EmpHour))
 echo "Employee Wage using switch case " $dailyEmpWage
+
+#UC5
+workingPerMonth=20
+totalWorkingHour=0
+
+for (( day=1; day<$workingPerMonth; day++ ))
+do
+	totalWorkingHour=$(($totalWorkingHour+$EmpHour))
+done
+EmpWagePerMonth=$(($totalWorkingHour*$EmpRatePerHour))
+echo "Employee wage per month " $EmpWagePerMonth
