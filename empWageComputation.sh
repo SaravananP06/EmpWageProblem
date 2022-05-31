@@ -13,8 +13,11 @@ fi
 
 #UC2
 EmpRatePerHour=20
-empHour=8
+Fulltime_EmpHr=8
 
-DailyWage=$(($EmpRatePerHour*$empHour))
+DailyWage=$(($EmpRatePerHour*$Fulltime_EmpHr))
 echo "Employee daily Wage is " $DailyWage
+
+#UC3
+Parttime_EmpHr=4
 
