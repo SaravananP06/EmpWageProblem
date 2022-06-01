@@ -86,7 +86,7 @@ do
         echo "Emp hour is " $WorkHours
 done
 totalSalary=$(( $totalEmpHr * $EmpRatePerHour ))
-echo "Employee Wage Per Month Using Function" $totalSalary
+echo "Employee Wage Per Month Using Function" $totalSalary 
 
 # UC8
 
@@ -104,6 +104,7 @@ do
 	totalEmpWage=$(( $totalEmpWage + $dailyWage ))
 
 done
-#totalEmpWage=$(( $totalEmpWage + $dailyWage ))
+totalEmpWage=$(( $totalEmpWage + $dailyWage ))
 echo "Total Emp Wage is " $totalEmpWage
+
 
