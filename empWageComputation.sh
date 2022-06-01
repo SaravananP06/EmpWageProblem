@@ -87,3 +87,23 @@ do
 done
 totalSalary=$(( $totalEmpHr * $EmpRatePerHour ))
 echo "Employee Wage Per Month Using Function" $totalSalary
+
+# UC8
+
+totalEmpWage=0
+dailyWage=0
+totalEmpHr1=0
+totalWorkingDays1=0
+while [[ $totalEmpHr1 -le 100 && $totalWorkingDays1 -le $WorkingPerMonth ]]
+do
+        (( totalWorkingDays1++ ))
+	totalEmpHr1=$(( $totalEmpHr1 + $EmpHour ))
+	echo "Work Hour is " $totalEmpHr1
+	dailyWage=$(( $totalEmpHr1 * $EmpRatePerHour ))
+	echo "Daily Wage is " $dailyWage
+	totalEmpWage=$(( $totalEmpWage + $dailyWage ))
+
+done
+#totalEmpWage=$(( $totalEmpWage + $dailyWage ))
+echo "Total Emp Wage is " $totalEmpWage
+
