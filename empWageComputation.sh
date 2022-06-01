@@ -64,3 +64,26 @@ do
 done
 EmpWagePerMaxHr=$(( $totalEmpHr * $EmpRatePerHour ))
 echo "Employee Wage Per Month and Hour " $EmpWagePerMaxHr
+
+#UC7
+function getWorkingHour() {
+	case $randomCheck1 in
+		1) WorkHours=8;;
+		2) WorkHours=4;;
+		0) WorkHours=0;;
+		*) WorkHours=0;;
+	esac
+
+	echo $WorkHours
+}
+
+while [[ $totalEmpHr -le $MaxWorkingHour && $totalWorkingDays -le $WorkingPerMonth ]]
+do
+        (( totalWorkingDays++ ))
+	WorkHours="${ getWorkingHour }"
+        totalEmpHr=$(($totalEmpHr+$WorkHours))
+        echo "Total Emp Hour is " $totalEmpHr
+        echo "Emp hour is " $WorkHours
+done
+totalSalary=$(( $totalEmpHr * $EmpRatePerHour ))
+echo "Employee Wage Per Month Using Function" $totalSalary
