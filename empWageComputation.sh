@@ -48,3 +48,19 @@ do
 done
 EmpWagePerMonth=$(($totalWorkingHour*$EmpRatePerHour))
 echo "Employee wage per month " $EmpWagePerMonth
+
+#UC6
+
+MaxWorkingHour=100
+totalEmpHr=0
+totalWorkingDays=0
+
+while [[ $totalEmpHr -le $MaxWorkingHour && $totalWorkingDays -le $WorkingPerMonth ]]
+do
+	(( totalWorkingDays++ ))
+	totalEmpHr=$(($totalEmpHr+$EmpHour))
+	echo "Total Emp Hour is " $totalEmpHr
+	echo "Emp hour is " $EmpHour
+done
+EmpWagePerMaxHr=$(( $totalEmpHr * $EmpRatePerHour ))
+echo "Employee Wage Per Month and Hour " $EmpWagePerMaxHr
