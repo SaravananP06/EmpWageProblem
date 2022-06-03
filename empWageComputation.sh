@@ -107,6 +107,5 @@ done
 totalEmpWage=$(( $totalEmpWage + $dailyWage ))
 echo "Total Emp Wage is " $totalEmpWage
 
-#UC9
-echo "=================================="
+
 
